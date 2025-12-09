@@ -2,7 +2,7 @@ USE ORDER_DDS;
 GO
 
 -- Categories
-CREATE TABLE dbo.Stg_Categories (
+CREATE TABLE staging.Stg_Categories (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     CategoryID INT,
     CategoryName NVARCHAR(255),
@@ -11,7 +11,7 @@ CREATE TABLE dbo.Stg_Categories (
 GO
 
 -- Customers
-CREATE TABLE dbo.Stg_Customers (
+CREATE TABLE staging.Stg_Customers (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     CustomerID NVARCHAR(10),
     CompanyName NVARCHAR(255),
@@ -28,7 +28,7 @@ CREATE TABLE dbo.Stg_Customers (
 GO
 
 -- Employees
-CREATE TABLE dbo.Stg_Employees (
+CREATE TABLE staging.Stg_Employees (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     EmployeeID INT,
     LastName NVARCHAR(50),
@@ -51,7 +51,7 @@ CREATE TABLE dbo.Stg_Employees (
 GO
 
 -- Order Details
-CREATE TABLE dbo.Stg_OrderDetails (
+CREATE TABLE staging.Stg_OrderDetails (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     OrderID INT,
     ProductID INT,
@@ -62,7 +62,7 @@ CREATE TABLE dbo.Stg_OrderDetails (
 GO
 
 -- Orders
-CREATE TABLE dbo.Stg_Orders (
+CREATE TABLE staging.Stg_Orders (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     OrderID INT,
     CustomerID NVARCHAR(10),
@@ -83,7 +83,7 @@ CREATE TABLE dbo.Stg_Orders (
 GO
 
 -- Products
-CREATE TABLE dbo.Stg_Products (
+CREATE TABLE staging.Stg_Products (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     ProductID INT,
     ProductName NVARCHAR(255),
@@ -99,7 +99,7 @@ CREATE TABLE dbo.Stg_Products (
 GO
 
 -- Region
-CREATE TABLE dbo.Stg_Region (
+CREATE TABLE staging.Stg_Region (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     RegionID INT,
     RegionDescription NVARCHAR(255),
@@ -109,7 +109,7 @@ CREATE TABLE dbo.Stg_Region (
 GO
 
 -- Shippers
-CREATE TABLE dbo.Stg_Shippers (
+CREATE TABLE staging.Stg_Shippers (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     ShipperID INT,
     CompanyName NVARCHAR(255),
@@ -118,7 +118,7 @@ CREATE TABLE dbo.Stg_Shippers (
 GO
 
 -- Suppliers
-CREATE TABLE dbo.Stg_Suppliers (
+CREATE TABLE staging.Stg_Suppliers (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     SupplierID INT,
     CompanyName NVARCHAR(255),
@@ -136,7 +136,7 @@ CREATE TABLE dbo.Stg_Suppliers (
 GO
 
 -- Territories
-CREATE TABLE dbo.Stg_Territories (
+CREATE TABLE staging.Stg_Territories (
     staging_raw_id_sk INT IDENTITY(1,1) PRIMARY KEY,
     TerritoryID NVARCHAR(10),
     TerritoryDescription NVARCHAR(255),
