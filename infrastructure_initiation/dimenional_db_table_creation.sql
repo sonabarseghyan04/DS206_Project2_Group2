@@ -223,7 +223,7 @@ CREATE TABLE dimensional.FactOrders (
     Shipper_SK_PK INT,
     Territory_SK_PK INT,
     MiniTerritory_SK_PK INT,
-    SOR_SK INT NULL,
+    SOR_SK INT NULL, 
     OrderDate DATE,
     RequiredDate DATE,
     ShippedDate DATE,
@@ -272,7 +272,7 @@ GO
 CREATE TABLE dimensional.FactOrderDetails (
     FactOrder_SK_PK INT NOT NULL,
     Product_SK_PK INT NOT NULL,
-    SOR_SK INT NULL,
+    SOR_SK INT NULL,  
     UnitPrice DECIMAL(19,4),
     Quantity INT,
     Discount DECIMAL(5,2),
